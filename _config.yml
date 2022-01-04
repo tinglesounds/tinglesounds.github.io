@@ -1,0 +1,148 @@
+# Site Settings
+name: tingledsounds
+title: tingledsounds
+description: Tingles, Kisses, Mouth Sounds, ASMR
+tags:
+  - asmr
+  - tingles
+  - kiss
+  - mouth
+  - sounds
+show_hero: true
+menu:
+  - title: Inicio
+    url: /
+      #- title: Acerca de
+    #url: /about
+      #- title: Contact
+      #url: /contact
+  - title: Feed
+    url: /feed.xml
+email: #youremail@test.com
+# See: https://disqus.com/
+disqus_username: #disqus_username
+# Contact Form Setting
+# See: https://formspree.io/
+formspree_form_id: #formspree_form_id
+
+translations:
+  text:
+    new_post: "Nuevo"
+    see_also: "Sugerencias"
+    search: "Buscar"
+    author: "Autor"
+    share: "Compartir"
+    comments: "Comentarios"
+  button:
+    read_now: "Ver Ahora"
+    share_on_twitter: "Compartir en Twitter"
+    share_on_facebook: "Compartir en Facebook"
+  pagination:
+    page: "Página"
+    of: "de"
+    next_page: "Página Siguiente"
+    next_post: "Página Previa"
+  recommendation:
+    text: "Querés leer más?"
+    back_btn: "Volver arriba"
+  error_404:
+    title: "Página no encontrada :("
+    message: "Lo lamento. No pudimos encontrar la página que buscabas."
+    image_alt: "404 - Página no encontrada"
+  contact:
+    title: "Hablemos"
+    subject: "Nuevo contacto!"
+    submit_btn: "Enviar"
+    placeholders:
+      name: "Tú nombre"
+      email: "Tú e-mail"
+      message: "Tú mensaje"
+    errors:
+      locale: "en"
+      empty_name: "El nombre es requerido"
+      empty_email: "El email es requerido"
+      invalid_email: "El email es inválido"
+      empty_message: "El mensaje es requerido"
+    after_send:
+      title: "Mensaje enviado!"
+      message: "Gracias por enviarme un correo. Lo contestaré lo más pronto posible."
+
+# Social Media Settings
+# Remove the item if you don't need it
+#github_username: github_username
+#facebook_username: facebook_username
+#twitter_username: twitter_username
+#instagram_username: instagram_username
+#linkedin_username: linkedin_username
+#medium_username: medium_username
+
+
+# Posts Settings
+show_time_bar: true
+show_modal_on_exit: false
+show_modal_on_finish_post: true
+two_columns_layout: true
+
+
+# Advanced Settings
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+google_analytics: "UA-XXXXXXXX-X"
+language: "es"
+categories_folder: category
+sent_message_url: "/contact/message-sent/"
+
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+collections:
+  authors:
+    output: true
+paginate_path: "/page/:num/"
+show_get_theme_btn: false
+use_logo: false
+
+# Content paginator
+paginate_content:
+  enabled: true
+  debug: false
+  collections:
+    - posts
+  auto: false
+  separator: "--page-break--"
+  permalink: "/:num/"
+  seo_canonical: true
+  properties:
+    part:
+      is_generated: true
+    last:
+      is_generated: true
+    single:
+      is_generated: true
+
+# SASS
+sass:
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-paginate-content
+
+# Exclude my node related stuff
+exclude: [
+  'package.json',
+  'package-lock.json',
+  'src',
+  'node_modules',
+  'initpost.sh',
+  'Gemfile',
+  'Gemfile.lock',
+  'gulpfile.js',
+  'README.md'
+]
+
+# Theme
+version: v1.0.0
